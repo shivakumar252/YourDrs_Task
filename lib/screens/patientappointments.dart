@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:YourDrs_App/components/popmenu.dart';
 import 'package:date_picker_timeline/date_picker_widget.dart';
 import 'package:flutter/material.dart';
 import '../components/patientsearch.dart';
@@ -242,16 +243,31 @@ class _FlightDetailsScreenState extends State<FlightDetailsScreen> {
                   ),
                 ],
               ),
-            )
+            ),
+            Container(
+              padding: EdgeInsets.only(right: 10.0, bottom: 10.0),
+              child: Align(
+                alignment: Alignment.bottomRight,
+                child: FloatingActionButton(
+                    backgroundColor: CustomizedColors.themeColor,
+                    onPressed: () {},
+                    tooltip: 'Increment',
+                    child: Pop(
+                      initialValue: 1,
+                    )),
+              ),
+            ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: CustomizedColors.themeColor,
-        tooltip: 'Increment',
-        onPressed: () {},
-        child: Icon(Icons.add),
-      ),
+
+      // floatingActionButton: FloatingActionButton(
+      //   backgroundColor: CustomizedColors.themeColor,
+      //   tooltip: 'Increment',
+      //   onPressed: () {},
+      //   child: Icon(Icons.add),
+
+      // ),
     );
   }
 }
